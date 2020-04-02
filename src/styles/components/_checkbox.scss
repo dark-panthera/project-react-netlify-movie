@@ -1,5 +1,11 @@
 // Importable Checkable Item
 
+/*
+
+This was simply imported from some resource found online
+
+*/
+
 @mixin appearance {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -57,7 +63,7 @@
 }
 
 .option-input:checked {
-  background: #364051;
+  background: $filter-grey;
 }
 
 .option-input:checked::before {
@@ -74,7 +80,7 @@
 
 .option-input:checked::after {
   @include click-wave();
-  background: #364051;
+  background: $filter-grey;
   content: "";
   display: block;
   position: relative;

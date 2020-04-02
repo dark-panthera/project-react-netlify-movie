@@ -71,7 +71,6 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = dispatch => ({
   startGetMovieDetails: movieId => dispatch(startGetMovieDetails(movieId))
-  //  selectMovieId: (movieId) => dispatch(selectMovieId(movieId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(View);
