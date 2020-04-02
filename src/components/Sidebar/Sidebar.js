@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setGenre, startGetGenreList } from "../../actions/movies";
+import { setGenre, startGetGenreList } from "../../store/actions/movies";
 
 class SideBar extends Component {
   state = {

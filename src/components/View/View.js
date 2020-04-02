@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import moment from "moment";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { startGetMovieDetails, selectMovieId } from "../../actions/movies";
+import { startGetMovieDetails, selectMovieId } from "../../store/actions/movies";
 
 class View extends Component {
   componentWillMount() {

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { setText, setSort, startGetGenreList } from "../../../actions/movies";
+import { setText, setSort, startGetGenreList } from "../../../store/actions/movies";
 
 class Filter extends Component {
   state = {

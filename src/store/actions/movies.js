@@ -18,7 +18,7 @@ export const startGetLatestMovies = () => {
     }
     return axios
       .get(
-        `https://api.themoviedb.org/4/discover/movie?sort_by=popularity.desc&api_key=939be648c60cb3df43265513d4d7027f&page=${currentSize}`
+        `https://api.themoviedb.org/4/discover/movie?sort_by=popularity.desc&api_key=${process.env.MOVIE_API}&page=${currentSize}`
       )
       .then(list => {
         const movies =  list.data;
@@ -50,7 +50,7 @@ export const startGetMovieDetails = (movieId) => {
 
     return axios
       .get(
-        `https://api.themoviedb.org/3/movie/${movieId}?api_key=939be648c60cb3df43265513d4d7027f&language=en-US`
+        `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.MOVIE_API}&language=en-US`
       )
       .then(list => {
         const movie =  list.data;
@@ -101,7 +101,7 @@ export const startGetGenreList = () => {
   return (dispatch, getState) => {
     return axios
       .get(
-        `https://api.themoviedb.org/3/genre/movie/list?api_key=939be648c60cb3df43265513d4d7027f&language=en-US`
+        `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.MOVIE_API}&language=en-US`
       )
       .then(list => {
         const genres =  list.data;

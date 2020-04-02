@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Card from "./Cards/Card";
 import { connect } from "react-redux";
-import { startGetLatestMovies } from "../../actions/movies";
-import selectMovies from "../../selectors/movies";
+import { startGetLatestMovies } from "../../store/actions/movies";
+import selectMovies from "../../store/selectors/movies";
 
 class CardHolder extends Component {
   componentDidMount() {

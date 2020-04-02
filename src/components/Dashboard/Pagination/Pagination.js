@@ -4,7 +4,7 @@ import {
   setPrevious,
   setNext,
   startGetLatestMovies
-} from "../../../actions/movies";
+} from "../../../store/actions/movies";
 
 class Pagination extends Component {
   onPrevousClick = () => {

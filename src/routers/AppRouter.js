@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Router, Route, Switch, Link, NavLink } from "react-router-dom";
 import createHistory from "history/createBrowserHistory";
-import HelpPage from "../components/HelpPage";
 import NotFoundPage from "../components/NotFoundPage";
 import Dashboard from "../components/Dashboard/Dashboard";
 import View from "../components/View/View";

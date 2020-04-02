@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch, Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const header = props => {
   return (
