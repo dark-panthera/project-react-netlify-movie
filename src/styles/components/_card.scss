@@ -1,0 +1,31 @@
+.border-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.card {
+    transition: transform 1s;
+    background: #b91067;
+    @extend .border-top;
+
+    &__title {
+        background: #364051;
+        padding: 1rem;
+        color: #fff;
+        text-align: center;
+        @extend .border-top;
+    }
+
+    /*
+    &:hover {
+        transform: translateY(-10px);
+    }
+*/
+    img {
+        width: 100%;
+    }
+
+    .info {
+        padding: 1rem;
+    }
+}

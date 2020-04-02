@@ -1,5 +1,5 @@
 {
-  "name": "expensify",
+  "name": "Netlify",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Julian Cutajar",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "axios": "^0.19.2",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",

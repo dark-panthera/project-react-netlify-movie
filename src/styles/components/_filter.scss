@@ -1,0 +1,27 @@
+.filter {
+    background: #364051;
+    color: #fff;
+
+    &>div {
+        height: 5rem;
+    }
+
+    & h4 {
+        margin: 0;
+        padding: 1.2rem 0;
+        height: 100%;
+    }
+
+    &__container {
+        color: #ececec;
+        background: #b91067;
+
+
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+        }
+    }
+
+}
