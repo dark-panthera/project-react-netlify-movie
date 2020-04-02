@@ -1,0 +1,57 @@
+// Varaible for Sidebar 
+
+// spacing
+$sidebar-s: 0 4rem;
+$sidebar-m: 0 2rem;
+
+// sidebar width
+$max-width: 50rem;
+$min-width: 30rem;
+
+.sidebar {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  background: $primary;
+  max-width: $max-width;
+  min-width: $min-width;
+  width: 100%;
+  height: 100vh;
+  border-right: 1px solid $primary-darker;
+  transition: display 2s ease;
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem;
+  }
+
+  &__divider {
+    border: 0.4px solid $primary-theme;
+  }
+
+  &__genre {
+    &-title {
+      color: #fff;
+      margin: $sidebar-s;
+      border-bottom: 1px solid #fff;
+      padding: 1rem 0;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.genre {
+  color: #fff;
+  font-size: $font-size-large;
+  margin: $sidebar-s;
+
+  &__label {
+    padding: $sidebar-m;
+  }
+}

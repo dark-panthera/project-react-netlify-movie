@@ -1,19 +1,52 @@
 .header {
- background: $dark-blue;   
-}
+    background: $dark-blue;
 
-.header__content {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: $s-size 0;
-}
+    &__content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: $s-size 0;
+    }
 
-.header__title {
-    color: #fff;
-    text-decoration: none;
+    &__title {
+        color: $primary-header;
+        text-decoration: none;
 
-    h1 {
-        margin: 0;
+        h1 {
+            margin: 0;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+
+    &__right {
+        margin: 0 5rem;
+    }
+
+    &__bar {
+        padding: 0 5rem;
+        cursor: pointer;
+
+        .bar {
+            width: 3rem;
+            height: .5rem;
+            background: #fff;
+            margin: 0.4rem;
+            cursor: pointer;
+            transition: background 2s ease;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                width: 2.5rem;
+            }
+        }
+
+        &:hover .bar {
+            background: $gold;
+        }
     }
 }

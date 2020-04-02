@@ -1,15 +1,19 @@
 import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { setText, setSort, startGetGenreList } from "../../../actions/movies";
 
 class Filter extends Component {
   state = {
-    text: '',
-    selected: ''
+    text: "",
+    selected: ""
   };
 
   onTextChange = e => {
     this.setState({
       text: e.target.value
     });
+
+    this.props.setText(e.target.value);
   };
 
   onSelectChange = e => {
@@ -17,12 +21,20 @@ class Filter extends Component {
       this.setState({
         selected: e.target.value
       });
+
+      this.props.setSort(e.target.value);
+    } else {
+      this.setState({
+        selected: ""
+      });
+
+      this.props.setSort("");
     }
   };
 
   onClick = e => {
-      e.preventDefault();
-    alert('clicked');
+    e.preventDefault();
+    alert("clicked");
   };
 
   render() {
@@ -65,9 +77,9 @@ class Filter extends Component {
                 </select>
               </div>
 
-              <div className="grid-button">
+              {/*<div className="grid-button">
                 <button className="button button--primary">Filter</button>
-              </div>
+              </div>*/}
             </form>
           </div>
         </div>
@@ -76,4 +88,10 @@ class Filter extends Component {
   }
 }
 
-export default Filter;
+const mapDispatchToProps = dispatch => ({
+  setText: text => dispatch(setText(text)),
+  setSort: sortBy => dispatch(setSort(sortBy)),
+  startGetGenreList: () => dispatch(startGetGenreList)
+});
+
+export default connect(undefined, mapDispatchToProps)(Filter);

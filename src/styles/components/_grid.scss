@@ -1,39 +1,40 @@
-.grid {
-  display: grid;
-  // grid-template-columns: 1fr 3fr;
-  // grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 5fr;
-  grid-template-areas:
-    "lt ti"
-    "ls si"
-    ". btn";
-  padding: 0.5rem 0;
-}
-
 .padding {
-  // width: 100%;
-  padding: 0.5rem 0;
+    // width: 100%
+    padding: 0.5rem 0;
 }
 
-.grid-label-text {
-  grid-area: lt;
-  @extend .padding;
-}
+.grid {
+    display: grid;
+    // grid-template-columns: 1fr 3fr;
+    // grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:
+        "lt ti"
+        "ls si"
+        ". btn";
+    padding: 0.5rem 0;
 
-.grid-text-input {
-  grid-area: ti;
-}
+    &-label {
+        &-text {
+            grid-area: lt;
+            @extend .padding;
+        }
 
-.grid-label-select {
-  grid-area: ls;
-  @extend .padding;
-}
+        &-select {
+            grid-area: ls;
+            @extend .padding;
+        }
+    }
 
-.grid-select-input {
-  grid-area: si;
-  //  @extend .padding;
-}
+    &-text-input {
+        grid-area: ti;
+    }
 
-.grid-button {
-  grid-area: btn;
+    &-select-input {
+        grid-area: si;
+    }
+
+    &-button {
+        grid-area: btn;
+    }
 }

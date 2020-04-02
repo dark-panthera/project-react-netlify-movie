@@ -1,35 +1,35 @@
 .banner {
+  &__image {
+    background: linear-gradient(rgba(255, 0, 96, 0.88), rgba(118, 0, 142, 0.72)),
+      url(https://cdn.hipwallpaper.com/i/37/48/YXnQtk.jpg);
+    height: 50rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
-    &__image {
-        background: linear-gradient(rgba(255, 0, 96, 0.88), rgba(118, 0, 142, 0.72)), url(https://cdn.hipwallpaper.com/i/37/48/YXnQtk.jpg);
-        height: 50rem;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-
-        &>div {
-            height: 100%;
-        }
-
-        @media (max-width: $desktop-breakpoint) {
-            height: 30rem;
-        }
+    & > div {
+      height: 100%;
     }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: center;
-        color: #fff;
-
-        & h1 {
-            margin: 2rem 0;
-        }
-
-        & p {
-            margin: 0;
-        }
+    @media (max-width: $desktop-breakpoint) {
+      height: 30rem;
     }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    color: #fff;
+
+    & h1 {
+      margin: 2rem 0;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
 }

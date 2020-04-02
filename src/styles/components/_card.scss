@@ -5,27 +5,117 @@
 
 .card {
     transition: transform 1s;
-    background: #b91067;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px 3px rgba(167, 145, 145, 0.27);
+    transition: background 3s ease;
+
     @extend .border-top;
 
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
     &__title {
-        background: #364051;
         padding: 1rem;
-        color: #fff;
+        color: $bronze;
         text-align: center;
         @extend .border-top;
     }
 
-    /*
-    &:hover {
-        transform: translateY(-10px);
-    }
-*/
-    img {
-        width: 100%;
+    &__body {
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 2.5rem;
     }
 
-    .info {
-        padding: 1rem;
+    &__img {
+        position: relative;
+
+
+        &>img {
+            width: 100%;
+        }
+    }
+
+    &__release-date {
+        position: absolute;
+        bottom: 3rem;
+        background: $gold; // #c98b45;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        transition: background 2s ease;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin: 0.4rem 0 0.8rem 0;
+    }
+
+    &:hover {
+        background: #b8c1c8;
+
+    }
+
+    &:hover &__release-date {
+        background: red;
+    }
+
+    &__body {
+        &__rating {
+            color: #fb8d05;
+            font-weight: 700;
+        }
+    }
+}
+
+.card-view {
+    &__body {
+        display: grid;
+        // grid-template-columns: 1fr 3fr;
+        grid-template-areas: "i i d d";
+
+        &__rating {
+            color: #fb8d05;
+            font-weight: 700;
+        }
+
+        @media (max-width: 650px) {
+            grid-template-areas: "i"
+                "d";
+        }
+    }
+
+    &__image {
+        grid-area: i;
+        padding: 1.5rem;
+
+        &>img {
+            width: 100%;
+        }
+    }
+
+    &__information {
+        grid-area: d;
+        padding: 0.5rem;
+    }
+
+    &__title {
+        color: #364051;
+        padding: 2rem;
+    }
+
+    &__label {
+        font-weight: 700;
+        color: #9c7071;
+        margin: 0;
+    }
+
+    &__overview {
+        margin: 0;
+        padding: 0;
+        text-align: justify;
     }
 }

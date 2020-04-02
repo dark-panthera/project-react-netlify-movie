@@ -3,5 +3,8 @@
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-gap: 1rem;
     padding: 0.5rem 1rem;
-    
+
+    @media (min-width: $desktop-breakpoint) {
+        grid-template-columns: repeat(auto-fit, minmax(40rem));
+    }
 }

@@ -1,5 +1,5 @@
 .filter {
-    background: #364051;
+    background: $filter-grey;
     color: #fff;
 
     &>div {
@@ -15,7 +15,6 @@
     &__container {
         color: #ececec;
         background: #b91067;
-
 
         select {
             width: 100%;
