@@ -5,25 +5,48 @@ exports[`should render Header correctly 1`] = `
   className="header"
 >
   <div
-    className="content-container"
+    className=""
   >
     <div
       className="header__content"
     >
-      <Link
-        className="header__title"
-        to="/dashboard"
+      <div
+        className="header__left"
       >
-        <h1>
-          Expensify
-        </h1>
-      </Link>
-      <button
-        className="button button--link"
-        onClick={[Function]}
+        <div
+          className="header__bar"
+          onClick={[Function]}
+        >
+          <div
+            className="bar"
+          />
+          <div
+            className="bar"
+          />
+          <div
+            className="bar"
+          />
+        </div>
+        <Link
+          className="header__title"
+          to="/dashboard"
+        >
+          <h1>
+            Netlify
+          </h1>
+        </Link>
+      </div>
+      <div
+        className="header__right"
       >
-        Logout
-      </button>
+        <button
+          className="button button--link"
+        >
+          <span
+            className="fa fa-filter"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </header>
